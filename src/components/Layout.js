@@ -3,11 +3,13 @@ import ContentWrapper from '../styles/ContentWrapper';
 import Header from './Header';
 import Footer from './Footer';
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageContext }) {
   return (
     <>
       <Header />
-      <ContentWrapper>{children}</ContentWrapper>
+      <ContentWrapper contentType={pageContext.pageType}>
+        {children}
+      </ContentWrapper>
       <Footer />
     </>
   );

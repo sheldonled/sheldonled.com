@@ -1,3 +1,6 @@
+require('dotenv').config();
+const clientConfig = require('./clientConfig');
+
 module.exports = {
   siteMetadata: {
     title: 'Sheldon Led',
@@ -40,6 +43,13 @@ module.exports = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        ...clientConfig.sanity,
+        token: process.env.SANITY_TOKEN,
+      },
     },
   ],
 };

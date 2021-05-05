@@ -5,6 +5,8 @@ export default createGlobalStyle`
     --black: #000;
     --jet: #222;
     --oil: #333;
+    --smoke: #eee;
+    --gainsboro: #ddd;
     --white: #fff;
     --blue: #135F95;
     --dark-blue: #1b4965;
@@ -27,6 +29,8 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
     min-height: 100%;
     overflow-x: hidden;
     width: 100vw;
@@ -49,5 +53,23 @@ export default createGlobalStyle`
     color: var(---dark-green);
     cursor: pointer;
     outline: 2px dashed var(--oil);
+  }
+
+  ul {
+    padding: 0 0 0 1.5rem;
+  }
+
+  code,
+  pre {
+    background: var(--smoke);
+    font-size: 0.8rem;
+  }
+
+  :not(pre) > code {
+    padding: 2px 4px;
+  }
+
+  pre {
+    padding: 1rem;
   }
 `;

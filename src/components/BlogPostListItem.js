@@ -8,11 +8,15 @@ import { imageUrlFor } from '../lib/image-url';
 import PortableText from './portableText';
 
 const BlogPostCard = styled.section`
+  height: 100%;
   a {
+    height: 100%;
     color: var(--jet);
     text-decoration: none;
+    position: relative;
     display: block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 1.5rem;
     &:focus,
     &:hover {
       outline: none;
@@ -34,8 +38,10 @@ const BlogPostCard = styled.section`
 
   time {
     font-size: 0.8rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     display: block;
-    text-align: right;
     padding: 0.2rem;
   }
 `;

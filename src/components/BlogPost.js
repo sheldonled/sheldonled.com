@@ -17,6 +17,7 @@ const Article = styled.article`
     text-align: right;
   }
 
+  img,
   .article-img {
     width: 100%;
   }
@@ -65,12 +66,13 @@ function BlogPost(props) {
           <img
             className="article-img"
             src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
+              .width(800)
+              .height(Math.floor((9 / 16) * 800))
               .fit('crop')
               .auto('format')
               .url()}
             alt={mainImage.alt}
+            width="800"
           />
           <figcaption>{mainImage.caption}</figcaption>
         </figure>

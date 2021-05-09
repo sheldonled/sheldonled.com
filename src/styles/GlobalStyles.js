@@ -46,6 +46,14 @@ export default createGlobalStyle`
     }
   }
 
+  figure {
+    margin: 0;
+    figcaption {
+      font-size: .8rem;
+      line-height: 0.5rem;
+    }
+  }
+
   button:hover,
   button:focus,
   a:hover,

@@ -13,6 +13,10 @@ const Article = styled.article`
     line-height: 2rem;
   }
 
+  figcaption {
+    text-align: right;
+  }
+
   .article-img {
     width: 100%;
   }
@@ -57,16 +61,19 @@ function BlogPost(props) {
   return (
     <Article>
       {mainImage && mainImage.asset && (
-        <img
-          className="article-img"
-          src={imageUrlFor(buildImageObj(mainImage))
-            .width(1200)
-            .height(Math.floor((9 / 16) * 1200))
-            .fit('crop')
-            .auto('format')
-            .url()}
-          alt={mainImage.alt}
-        />
+        <figure>
+          <img
+            className="article-img"
+            src={imageUrlFor(buildImageObj(mainImage))
+              .width(1200)
+              .height(Math.floor((9 / 16) * 1200))
+              .fit('crop')
+              .auto('format')
+              .url()}
+            alt={mainImage.alt}
+          />
+          <figcaption>{mainImage.caption}</figcaption>
+        </figure>
       )}
       <main>
         <h1>{title}</h1>

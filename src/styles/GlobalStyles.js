@@ -7,6 +7,7 @@ export default createGlobalStyle`
     --oil: #333;
     --smoke: #eee;
     --gainsboro: #ddd;
+    --snow : #F9F9F9;
     --white: #fff;
     --blue: #135F95;
     --dark-blue: #1b4965;
@@ -65,6 +66,37 @@ export default createGlobalStyle`
 
   ul {
     padding: 0 0 0 1.5rem;
+  }
+
+  blockquote {
+    position: relative;
+    font-style: italic;
+    margin: 1rem 1.5rem 1rem 0;
+    padding: 1rem;
+    border-width: 1.2rem;
+    border-style: solid;
+    border-image: linear-gradient(
+      to right,
+      var(--light-green),
+      var(--snow)
+    ) 1 100%;
+    border-right: 0;
+    background-color: var(--snow);
+  }
+
+  blockquote::before {
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    content: open-quote;
+    font-size: 2rem;
+  }
+  blockquote::after {
+    position: absolute;
+    left: -1rem;
+    bottom: -.8rem;
+    content: close-quote;
+    font-size: 2rem;
   }
 
   code,

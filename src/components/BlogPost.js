@@ -2,9 +2,8 @@ import React from 'react';
 import dayjs from 'dayjs';
 import styled from 'styled-components';
 
-import { buildImageObj } from '../lib/helpers';
-import { imageUrlFor } from '../lib/image-url';
 import PortableText from './portableText';
+import SanityImg from './SanityImg';
 
 const Article = styled.article`
   margin: 2rem 0;
@@ -61,22 +60,9 @@ function BlogPost(props) {
 
   return (
     <Article>
-      {mainImage && mainImage.asset && (
-        <figure>
-          <img
-            className="article-img"
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(800)
-              .height(Math.floor((9 / 16) * 800))
-              .fit('crop')
-              .auto('format')
-              .url()}
-            alt={mainImage.alt}
-            width="800"
-          />
-          <figcaption>{mainImage.caption}</figcaption>
-        </figure>
-      )}
+      <SanityImg
+        node={mainImage}
+      />
       <main>
         <h1>{title}</h1>
         {publishedDate && (

@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: 'https://sheldonled.com',
   },
   plugins: [
+    'gatsby-plugin-image',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',

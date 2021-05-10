@@ -19,13 +19,12 @@ export default function HomePage() {
       <ProfilePicture src="https://www.gravatar.com/avatar/e3035dcdf2594452454e32051493a3fc?s=320" />
       <h3>Olá, sou o Sheldon Led</h3>
       <p>
-        Eu sou engenheiro de software (Front End) na AWS, mas esse site é onde
-        expresso minhas opiniões e não está relacionado à empresa na qual
-        trabalho.
+        Eu sou engenheiro de software (Front End) que curte tudo relacionado à Desenvolvimento Web.
+        Desde planejamento/arquitetura à deploy/monitoramento.
+        Atualmente trabalhando na <a href="https://gitlab.com/sheldonled">Gitlab</a>.
       </p>
       <p>
-        Eu busco todos os dias escrever software melhor e ajudar pessoas a fazer
-        o mesmo.
+        Eu busco todos os dias escrever software melhor e ajudar pessoas a fazer o mesmo.
       </p>
     </>
   );

@@ -5,16 +5,25 @@ import clientConfig from '../../clientConfig';
 import SanityImg from './SanityImg';
 import Code from './Code';
 
-const Link = ({mark, children}) => {
+const InternalLink = ({ mark, children }) => {
+  const {
+    reference: {
+      slug: { current = {} },
+    },
+  } = mark;
+  return Link({ mark: { href: `/${current}`, blank: mark.blank }, children });
+};
+
+const Link = ({ mark, children }) => {
   return (
-  <a
-    href={mark.href}
-    target={mark.blank ? "_blank" : "" }
-    rel="noopener noreferrer"
-  >
-    {children}
-  </a>
-)
+    <a
+      href={mark.href}
+      target={mark.blank ? '_blank' : ''}
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  );
 };
 
 const serializers = {
@@ -25,6 +34,7 @@ const serializers = {
     code: Code,
   },
   marks: {
+    internalLink: InternalLink,
     link: Link,
   },
 };
